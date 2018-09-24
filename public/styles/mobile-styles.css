@@ -1,0 +1,74 @@
+
+@media(max-width: 850px) {
+
+  /* notification messages */
+  .notification_span {
+    width: 50vw;
+  }
+  .notification_img {
+    height: 4vh;
+  }
+
+  /* main container */
+  .flex-main-container {
+    margin-bottom: 75px;
+  }
+
+  /* header */
+  .flex-main-container .flex-header-container {
+    flex-direction: column;
+  }
+  .flex-header-container img {
+    height: 8vh;
+    margin: 0px;
+  }
+  .flex-header-container div {
+    text-align: center;
+    margin: 0px;
+    font-size: 1.2em;
+  }
+
+  /* init message */
+  .init-message {
+    margin-bottom: 60px;
+  }
+  .init-message img {
+    height: 20vh;
+  }
+
+
+  /* control panel */
+  .flex-control_panel-container {
+    flex-direction: column;
+  }
+  .flex-control_panel-container div {
+    margin: 10px 0px;
+  }
+  .flex-control_panel-container select, input {
+    width: 80vw;
+  }
+  .flex-control_panel-container .btn-active {
+    width: 80vw;
+  }
+  .flex-control_panel-container .btn-inactive {
+    width: 80vw;
+  }
+
+  /* data container */
+  .flex-data-container .heading_row {
+    font-size: 1em;
+
+  }
+
+
+  /* export container */
+  .flex-export-container .btn_excel-active {
+    width: 80vw;
+    font-size: 1.1em;
+  }
+  .flex-export-container .btn_excel-inactive {
+    width: 80vw;
+  }
+
+/* end media query */
+}

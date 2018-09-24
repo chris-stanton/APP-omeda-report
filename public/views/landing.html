@@ -1,0 +1,179 @@
+
+<!-- main container -->
+<section class="flex-main-container">
+  <!-- header -->
+  <header class="flex-header-container">
+    <a href="http://epgmediallc.com"><img ng-src="./assets/images/logo2.png"></a>
+    <div>
+      <h5>{{lc.brand}}</h5>
+      <h6>{{lc.date}}</h6>
+    </div>
+  </header>
+
+  <!-- control panel -->
+  <section class="flex-control_panel-container">
+    <!-- organization container -->
+    <div class="control_panel-org-container">
+      <span><label for="organization">Organization</label><em class="required">*required</em></span>
+      <select name="organization" ng-model="lc.query.organization" ng-class="organization">
+        <option value="EPG Media">{{lc.organization}}</option>
+      </select>
+    </div>
+    <!-- brand container -->
+    <div class="control_panel-brand-container">
+      <span><label for="brand">Brand</label><em class="required">*required</em></span>
+      <select name="brand" ng-model="lc.query.brand" ng-class="brand">
+        <option value="EPG Media Central Database">{{lc.brand}}</option>
+      </select>
+    </div>
+    <!-- users container -->
+    <div class="control_panel-brand-container">
+      <span><label for="user">User</label><em class="required">*required</em></span>
+      <select name="user" ng-model="lc.query.user" ng-class="user">
+        <option ng-repeat="user in lc.users" value="{{user.user_email}}">{{user.username}} - {{user.user_email}}</option>
+      </select>
+    </div>
+    <!-- deployment date container -->
+    <div class="control_panel-deploy_date-container">
+      <span><label for="deploy_date">Deployment Date</label><em class="required">*required</em></span>
+      <select name="deploy_date" ng-model="lc.query.deployment_date" ng-class="deployment_date">
+        <option value="all">All</option>
+        <option value="{{lc.date}}">Today ({{lc.date}})</option>
+        <option value="{{lc.yesturday}}">Yesturday ({{lc.yesturday}})</option>
+        <!-- past deployments -->
+        <option selected disabled>---- Past Deployments ----</option>
+        <option value="{{lc.one_week_back}}">Last 7 days (since {{lc.one_week_back}})</option>
+        <option value="{{lc.two_week_back}}">Last 14 days (since {{lc.two_week_back}})</option>
+        <option value="{{lc.three_week_back}}">Last 21 days (since {{lc.three_week_back}})</option>
+        <option value="{{lc.thirty_week_back}}">Last 30 days (since {{lc.thirty_week_back}})</option>
+        <option value="{{lc.sixty_week_back}}">Last 60 days (since {{lc.sixty_week_back}})</option>
+        <!-- future deployments -->
+        <option selected disabled>---- Future Deployments ----</option>
+        <option value="{{lc.one_week_out}}">Next 7 Days (by {{lc.one_week_out}})</option>
+        <option value="{{lc.two_week_out}}">Next 14 Days (by {{lc.two_week_out}})</option>
+        <option value="{{lc.three_week_out}}">Next 21 Days (by {{lc.three_week_out}})</option>
+        <option value="{{lc.thirty_week_out}}">Next 30 Days (by {{lc.thirty_week_out}})</option>
+        <option value="{{lc.sixty_week_out}}">Next 60 Days (by {{lc.sixty_week_out}})</option>
+        <option value="{{lc.ninety_week_out}}">Next 90 Days (by {{lc.ninety_week_out}})</option>
+        <!-- monthly deployments -->
+        <option selected disabled>---- Monthly Deployments ----</option>
+        <option value="{{lc.this_month}}">{{lc.this_month}} (this month)</option>
+        <option value="{{lc.month_one}}">{{lc.month_one}} (next month)</option>
+        <option value="{{lc.month_two}}">{{lc.month_two}}</option>
+        <option value="{{lc.month_three}}">{{lc.month_three}}</option>
+        <option value="{{lc.month_four}}">{{lc.month_four}}</option>
+        <option value="{{lc.month_five}}">{{lc.month_five}}</option>
+        <option value="{{lc.month_six}}">{{lc.month_six}}</option>
+        <option value="{{lc.month_seven}}">{{lc.month_seven}}</option>
+        <option value="{{lc.month_eight}}">{{lc.month_eight}}</option>
+        <option value="{{lc.month_nine}}">{{lc.month_nine}}</option>
+        <option value="{{lc.month_ten}}">{{lc.month_ten}}</option>
+        <option value="{{lc.month_eleven}}">{{lc.month_eleven}}</option>
+        <option value="{{lc.month_twelve}}">{{lc.month_twelve}}</option>
+        <option value="{{lc.month_thirteen}}">{{lc.month_thirteen}}</option>
+        <option value="{{lc.month_fourteen}}">{{lc.month_fourteen}}</option>
+        <option value="{{lc.month_fifteen}}">{{lc.month_fifteen}}</option>
+        <option value="{{lc.month_sixteen}}">{{lc.month_sixteen}}</option>
+        <option value="{{lc.month_seventeen}}">{{lc.month_seventeen}}</option>
+        <option value="{{lc.month_eighteen}}">{{lc.month_eighteen}}</option>
+        <option value="{{lc.month_nineteen}}">{{lc.month_nineteen}}</option>
+        <option value="{{lc.month_twenty}}">{{lc.month_twenty}}</option>
+        <option value="{{lc.month_twentyone}}">{{lc.month_twentyone}}</option>
+        <option value="{{lc.month_twentytwo}}">{{lc.month_twentytwo}}</option>
+        <option value="{{lc.month_twentythree}}">{{lc.month_twentythree}}</option>
+        <option value="{{lc.month_twentyfour}}">{{lc.month_twentyfour}}</option>
+      </select>
+    </div>
+    <!-- name contains container -->
+    <div class="control_panel-name_contains-container">
+      <label for="name_contains">Name Contains </label>
+      <input type="text" name="name_contains" ng-model="lc.query.name_contains" ng-class="name_contains">
+    </div>
+    <!-- trackID container -->
+    <div class="control_panel-trackID-container">
+      <label for="trackID">TrackID</label>
+      <input type="text" name="trackID" ng-model="lc.query.trackID" ng-class="trackID">
+    </div>
+    <!-- owner container -->
+    <div class="control_panel-owner-container">
+      <label for="owner">Owner</label>
+      <input type="text" name="owner" ng-model="lc.query.owner" ng-class="owner">
+    </div>
+    <!-- submit button container -->
+    <div class="control_panel-button-container">
+      <button type="button" name="button" ng-click="lc.sendQuery(lc.query)" class="btn-active" ng-if="lc.button_status === 'button_active'">Search</button>
+      <button type="button" name="button" class="btn-inactive" ng-if="lc.button_status === 'button_inactive'"><img src="../assets/images/loader.gif" class="loader"></button>
+    </div>
+  </section>
+
+  <!-- displays on init and when lc.query is null -->
+  <section ng-if="lc.data_container === 'inactive'" class="init-message">
+    <p><em>Showing no results...</em></p>
+    <img ng-src="./assets/images/omeda.png">
+  </section>
+
+  <!-- container shows when lc.query is not NULL -->
+  <section ng-if="lc.data_container === 'active'">
+    <!-- data container -->
+    <section class="flex-data-container">
+      <p><em>Showing {{lc.API_response_total}} results...</em></p>
+      <table>
+        <!-- table heading container -->
+        <tr class="heading_row">
+          <td>Brand</td>
+          <td>Type</td>
+          <td>Campaign</td>
+          <td>Date</td>
+          <td>Headline</td>
+          <td>Deployed</td>
+          <td>Recieved</td>
+          <td>Bounce%</td>
+          <td>Opens</td>
+          <td>Unique Opens</td>
+          <td>Open Rate</td>
+          <td>Clicks</td>
+          <td>Unique Clicks</td>
+          <td>Click to Open Rate</td>
+          <td>CTR%</td>
+        </tr>
+        <!-- data output container -->
+        <tr ng-repeat="response in lc.API_response" class="highlight_row">
+          <td>{{response.brand}}</td>
+          <td>{{response.type}}</td>
+          <td>{{response.campaign}}</td>
+          <td>{{response.date}}</td>
+          <td>{{response.headline}}</td>
+          <td>{{response.deployed}}</td>
+          <td>{{response.recieved}}</td>
+          <td>{{response.bounce}}</td>
+          <td>{{response.opens}}</td>
+          <td>{{response.unique_opens}}</td>
+          <td>{{response.open_rate}}</td>
+          <td>{{response.clicks}}</td>
+          <td>{{response.unique_clicks}}</td>
+          <td>{{response.click_to_open}}</td>
+          <td>{{response.ctr}}</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- export container -->
+    <section class="flex-export-container">
+      <button ng-if="lc.excel_button_status === 'button_active'" type="button" name="export_to_excel" class="btn_excel-active" ng-click="lc.export(lc.API_response)">Export to Excel</button>
+      <button ng-if="lc.excel_button_status === 'button_inactive'" type="button" name="export_to_excel" class="btn_excel-inactive"><img src="./assets/images/loader.gif"></button>
+    </section>
+  </section>
+
+  <!-- footer container -->
+  <footer>
+    <div class="flex-footer-copyright">
+      <h5>&#169; 2018 EPG Media LLC</h5>
+    </div>
+    <div class="flex-footer-power">
+      <h5>Powered By</h5>
+      <img src="./assets/images/omeda2.png">
+    </div>
+  </footer>
+
+<!-- end main container -->
+</section>

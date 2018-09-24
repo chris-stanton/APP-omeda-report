@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Omeda Reporting App</title>
+        <!-- client-side javascript libraries -->
+        <script type="text/javascript" src="./assets/vendors/angular.min.js"></script>
+        <script type="text/javascript" src="./assets/vendors/angular-route.min.js"></script>
+        <script type="text/javascript" src="./assets/vendors/angular-tooltips.min.js"></script>
+        <script type="text/javascript" src="./assets/vendors/ngAlertify.js"></script>
+        <script type="text/javascript" src="./assets/vendors/moment.min.js"></script>
+        <script type="text/javascript" src="./scripts/client.js"></script>
+        <!-- controllers -->
+        <script type="text/javascript" src="./scripts/controllers/landing.controller.js"></script>
+          <!-- favicon -->
+          <link rel="icon" type="image/ico" href="./assets/images/favicon.ico"/>
+          <!-- stylesheets -->
+          <link rel="stylesheet" href="./styles/desktop-styles.css"/>
+          <link rel="stylesheet" href="./styles/mobile-styles.css"/>
+          <!-- angular-tooltips -->
+          <link rel="stylesheet" href="./assets/vendors/angular-tooltips.min.css"/>
+  </head>
+  <body>
+    <main ng-view></main>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "omeda-reporting-web-app",
+  "version": "1.0.0",
+  "description": "web app for pulling specific reports from omeda",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "nodemon app.js"
+  },
+  "author": "Chris Stanton",
+  "license": "MIT",
+  "dependencies": {
+    "alertify.js": "1.0.12",
+    "angular": "1.6.3",
+    "angular-route": "1.6.3",
+    "angular-tooltips": "1.2.2",
+    "body-parser": "1.17.1",
+    "dotenv-node": "0.0.2",
+    "export-to-excel": "^0.2.1",
+    "express": "4.15.2",
+    "moment": "^2.22.2",
+    "nodemailer": "4.4.2",
+    "nodemailer-smtp-transport": "2.7.4",
+    "nodemon": "1.18.3",
+    "omeda-api-client": "1.0.1",
+    "pg": "6.1.4"
+  }
+}
